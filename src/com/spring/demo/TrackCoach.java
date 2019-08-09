@@ -9,12 +9,13 @@ public class TrackCoach implements Coach {
 	}
 	
 	public TrackCoach(FortuneService thefortuneService) {
+		System.out.print("Inside TrackCoach constructor");
 		fortuneService = thefortuneService;
 	}
 	
 	@Override
 	public String getDailyWorkout() {
-		return "Run a hard 5k";
+		return "\nRun a hard 5k";
 	}
 	
 	@Override
@@ -22,5 +23,16 @@ public class TrackCoach implements Coach {
 		// TODO Auto-generated method stub
 		return fortuneService.getFortune();
 	}
+	
+	// add an init method
+	public void doMyStartUpStuff() {
+		System.out.print("\nTrackCoach doMyStartUpStuff");
+	}
+	
+	// add an destroy method
+	public void doMyCleanUpStuff() {
+		System.out.print("\nTrackCoach doMyCleanUpStuff");
+	}
+	
 
 }
